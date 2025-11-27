@@ -10,7 +10,7 @@ Route::group(["prefix" => "v0.1"], function(){
     //Authenticated Routes
     Route::group(["prefix" => "user"], function(){
         Route::get('/tasks/{id?}', [TaskController::class, "getAllTasks"])->name("task-listing");
-        Route::post('/add_task', [TaskController::class, "addTask"]);
+        Route::post('/add_update_task/{id?}', [TaskController::class, "addOrUpdateTask"]);
     });
 
     //Authenticated Routes
@@ -32,12 +32,15 @@ Route::post('/register', [TaskController::class, "addTask"]);
 2- Migrations DONE
 3- Controllers
 4- Models 
-5- Services
-6- Seeders
+5- Services DONE
+6- Seeders / Factory
+6- Traits DONE
 
-
-6- Traits
 7- Middlewares
 8- Advancded Models 
 9- Testing
 */  
+
+
+
+
