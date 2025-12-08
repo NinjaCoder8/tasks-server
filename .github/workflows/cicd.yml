@@ -1,0 +1,16 @@
+name: CI/CD Laravel Server
+
+on:
+  push: 
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs: 
+  ci:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Testing
+        run: echo "Hello World :)"
+    
