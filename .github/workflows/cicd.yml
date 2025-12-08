@@ -27,7 +27,6 @@ jobs:
             cp .env.example .env
             php artisan key:generate
             php artisan jwt:secret
-            composer update
         
       - name: Run Tests
         run: php artisan test
