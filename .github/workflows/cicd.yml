@@ -41,7 +41,16 @@ jobs:
      needs: ci
      
      steps:
-        - name: Deploying
-          run: echo "Deploying"
+      - name: Checkout code 
+        uses: actions/checkout@v6.0.1
+
+      - name: Connect to EC2 Server
+        uses: appleboy/ssh-actions@v1.2.1
+        with:
+          host: ${{ secrets.host_name }}
+          username: ${{ secrets.username }}
+          key: ${{ secrets.key }}
+        
+          
      
     
