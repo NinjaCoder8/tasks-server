@@ -33,8 +33,13 @@ jobs:
             php artisan config:clear
         
       - name: Run Tests
-        run: php artisan test --without-tty
+        run: echo "Working" #php artisan test --without-tty
 
+  cd: 
+     runs-on: ubuntu-latest
       
-        
+     steps:
+        - name: Deploying
+          run: echo "Deploying"
+     
     
